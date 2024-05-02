@@ -68,3 +68,41 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### You can see live demo  - https://todo-app-using-reac-t.web.app/
+
+### Home Page
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/059d6b45-f3d6-43cc-a9b3-fb782332f443)
+
+### add new todo
+![image](https://github.com/Fida143/todo-app/assets/101417366/def05508-78b0-40a9-8240-c8963f5ce48c)
+
+### edit todo
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/cd3ab727-b73a-4a82-a391-78b59cd60c31)
+
+### update todo
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/da10fb6e-0a0d-43f1-91e1-8ac582346725)
+
+### button functions
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/319ef3eb-9a00-4a96-9a84-3bf8b612c65c)
+
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/c8878f05-463f-4a5b-940f-e11e89835b9e)
+
+### Responsive
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/8d4a857a-6ec3-47e8-9f50-b81a5e1ee61c)
+
+
+
+
+
+
+
+
+

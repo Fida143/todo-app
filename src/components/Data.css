@@ -1,0 +1,65 @@
+.data {
+  display: flex;
+  align-items: center;
+  /* background-color: gray; */
+  color: black;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  margin: 10px 0;
+  position: relative;
+  border: 1px solid #af40ff;
+  height: 34px;
+}
+.data:hover {
+  .feature {
+    display: block;
+  }
+}
+.completed {
+  background-color: #94f294;
+  border: 1px solid #94f294;
+  color: darkgreen;
+}
+.text {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* background-color: red; */
+}
+
+.text p::selection {
+  background: transparent;
+}
+.feature {
+  display: none;
+  width: 20%;
+  /* background-color: aqua; */
+}
+
+li::marker {
+  background-color: #af40ff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.close {
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.edit {
+  font-size: 1.5rem;
+  color: #af40ff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 550px) {
+  .feature {
+    display: block;
+    width: fit-content;
+  }
+  .text {
+    width: 77%;
+  }
+}

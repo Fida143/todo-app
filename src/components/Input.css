@@ -1,0 +1,144 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 97vw;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.container:nth-child(2) {
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  /* margin: 40px auto; */
+  padding: 1.5rem;
+  padding-left: 0px;
+  border-radius: 9px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.getData {
+  /* height: 50px; */
+  /* background-color: red; */
+  /* margin-right: 4rem; */
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+textarea {
+  width: 95%;
+  height: 93%;
+
+  font-size: 1.2rem;
+  padding: 1rem;
+  /* border: 1px solid gray; */
+  resize: none;
+  border-radius: 0.4rem;
+  outline: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn {
+  width: 50px;
+  height: 52px;
+  /* background-color: purple; */
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: white;
+  /* margin-left: 1rem; */
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 33px;
+  font-weight: bold;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+.btn svg path {
+  stroke: #fff;
+}
+
+.reset {
+  margin-right: 4rem;
+  /* color: aliceblue; */
+}
+
+.clear {
+  width: fit-content;
+  position: absolute;
+  font-size: 18px;
+  /* top: 30rem; */
+}
+#length {
+  padding-top: 1rem;
+  padding-left: 40px;
+  font-size: 18px;
+  margin: 0px;
+}
+
+input[type="search"] {
+  width: 70%;
+  outline: 0;
+  padding: 0.4rem 0.8rem;
+  margin-left: 40px;
+  border: none;
+  border-bottom: 2px solid #af40ff;
+}
+
+@media only screen and (max-width: 700px) {
+  .getData {
+    width: 100%;
+  }
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+  .container:nth-child(2) {
+    width: 95%;
+  }
+  textarea {
+    width: 91%;
+  }
+}
+
+/* @media only screen and (max-width: 550px) {
+  .main-container {
+    margin: 1rem 2rem 1rem 1rem;
+  }
+  textarea {
+    width: 300px;
+  }
+
+  .container:nth-child(2) {
+    width: 300px;
+    padding: 0.5rem;
+  }
+  .text {
+    width: 70%;
+  }
+  .feature span {
+    font-size: 18px;
+    width: 40px;
+  }
+  .data {
+    display: block;
+  }
+  .feature {
+    display: block;
+  }
+} */

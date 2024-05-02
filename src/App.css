@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+
+::-webkit-scrollbar {
+  width: 7px;
+  padding: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  width: 5px;
+  background-color: #af40ff;
+}
+
+h1 {
+  /* width: fit-content;
+  margin: 10px auto; */
+  /* text-align: center; */
+  /* font-family: "Sedgwick Ave Display", cursive; */
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+  border-bottom: 3px solid #af40ff;
+  width: fit-content;
+  margin: 0.5rem auto;
+  /* color: #5b42f3; */
+  background: -webkit-linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 svg {
+  color: #af40ff;
+}

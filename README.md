@@ -94,6 +94,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ![image](https://github.com/Fida143/todo-app/assets/101417366/c8878f05-463f-4a5b-940f-e11e89835b9e)
 
+### Double click on todo to change it of completed
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/7e4c83c4-0899-4021-b1d4-23222459edf3)
+
+### Search todo 
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/7c4d3d3b-415f-489d-b553-cc1c7919f953)
+
+![image](https://github.com/Fida143/todo-app/assets/101417366/5c524116-1798-4243-a18f-004e55c9e92f)
+
+
+
 ### Responsive
 
 ![image](https://github.com/Fida143/todo-app/assets/101417366/8d4a857a-6ec3-47e8-9f50-b81a5e1ee61c)

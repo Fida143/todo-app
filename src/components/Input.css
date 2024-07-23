@@ -48,6 +48,26 @@ textarea {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.created-on,
+.completed-on {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.created-on {
+  left: 0;
+  color: #af40ff;
+  font-weight: bold;
+}
+.completed-on {
+  left: 50%;
+  font-weight: bold;
+  color: #af40ff;
+}
+
 .btn {
   width: 50px;
   height: 52px;

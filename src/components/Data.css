@@ -12,7 +12,8 @@
 }
 .data:hover {
   .feature {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 .completed {
@@ -21,7 +22,7 @@
   color: darkgreen;
 }
 .text {
-  width: 80%;
+  width: 55%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -33,7 +34,7 @@
 }
 .feature {
   display: none;
-  width: 20%;
+  width: fit-content;
   /* background-color: aqua; */
 }
 
@@ -54,12 +55,30 @@ li::marker {
   margin: 0 10px;
   cursor: pointer;
 }
+.status {
+  margin-top: -5px;
+}
+.status > select {
+  border: 1px solid #af40ff;
+  border-radius: 0.4rem;
+  padding: 0.15rem;
+  color: #af40ff;
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.479);
+  color: black;
+}
+.red {
+  background-color: rgba(255, 0, 0, 0.507);
+  color: #000;
+}
 @media only screen and (max-width: 550px) {
   .feature {
     display: block;
     width: fit-content;
   }
   .text {
-    width: 77%;
+    width: 70%;
   }
 }

@@ -1,6 +1,5 @@
 import "./Input.css";
 import Data from "./Data";
-// import './Container.css'
 import { useEffect, useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { GrPowerReset } from "react-icons/gr";
@@ -14,40 +13,62 @@ function Input({
   update,
   clearData,
   length,
-  setData,
 }) {
-  let initialState = { text: "", id: "" };
-  const [editData, setEditData] = useState(initialState);
+  //  By Default Today date and current Time is Selected
 
+  let todayDate;
+
+  function setCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+    const day = String(now.getDate()).padStart(2, "0");
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+
+    todayDate = `${year}-${month}-${day}T${hours}:${minutes}`;
+  }
+  setCurrentDateTime();
+
+  //  Todo Initial State
+
+  let initialState = {
+    text: "",
+    id: "",
+    createdOn: todayDate,
+    completedBefore: "",
+    isCompleted: false,
+  };
+
+  // States
+
+  const [editData, setEditData] = useState(initialState);
   const [search, SetSearch] = useState("");
 
-  // let newData;
+  // Getting input Values
 
   function handleChange(e) {
     e.stopPropagation();
-    console.log(e.target.value);
     setEditData({ ...editData, [e.target.name]: e.target.value });
-    console.log(editData);
   }
+
+  //  Create or Edit Todo
 
   function handleSubmit(e) {
     e.stopPropagation();
     e.preventDefault();
-    // console.log(e);
-    //  console.log("submit",newData);
     if (edit) update(editData);
     else onAdd(editData);
     setEditData(initialState);
-    // console.log("editzzz",edit);
-    // console.log(editData);
   }
 
   useEffect(() => {
     if (edit !== null) {
       setEditData(edit);
-      console.log("editz", edit);
     }
   }, [edit]);
+
+  //  Reset Input Data
 
   function handleReset(e) {
     e.stopPropagation();
@@ -55,36 +76,24 @@ function Input({
     setEditData(initialState);
   }
 
+  //  Delete all Todos
+
   function handleClear(e) {
     e.stopPropagation();
     clearData();
   }
 
+  //  Search by Todo Text
+
   function handleSearch(e) {
     e.stopPropagation();
-    console.log(e.target.value);
     SetSearch(e.target.value);
   }
-
-  // const handleCompleted = (e) =>{
-
-  // }
-
-  //   function handleFilter() {
-  //     const input = search.toUpperCase();
-  //     // data.map((d) => console.log(d.text.toUpperCase(), "fill"));
-  //     data.map((d) => console.log(d.text.toUpperCase().indexOf(input)));
-
-  //     console.log(input);
-  //   }
-
-  //   useEffect(() => {
-  //     handleFilter();
-  //   }, [search]);
 
   return (
     <>
       <div className="main-container">
+        {/* Input Section */}
         <form className="getData">
           <textarea
             type="text"
@@ -92,19 +101,42 @@ function Input({
             onChange={handleChange}
             name="text"
             value={editData.text}
+            onKeyDown={(e) => {
+              e.stopPropagation();
+              if (e.key == "Enter") {
+                handleSubmit(e);
+              }
+            }}
           />
-
           <Tooltip id={`tooltip-top`}>
             <button className="btn" onClick={handleSubmit}>
               {edit ? <BiEdit></BiEdit> : "+"}
             </button>
           </Tooltip>
-
           <button className="btn reset" onClick={handleReset}>
             {<GrPowerReset></GrPowerReset>}
           </button>
+          <span className="created-on">
+            <span>Start :</span>
+            <input
+              type="datetime-local"
+              name="createdOn"
+              onChange={handleChange}
+              value={editData.createdOn}
+            />
+          </span>
+          <span className="completed-on">
+            <span>End :</span>
+            <input
+              type="datetime-local"
+              name="completedBefore"
+              onChange={handleChange}
+              value={editData.completedBefore}
+            />
+          </span>
         </form>
 
+        {/* Todo List Section */}
         <div className="container">
           <input
             type="search"
@@ -127,22 +159,17 @@ function Input({
                     key={d.id}
                     id={d.id}
                     text={d.text}
+                    isCompleted={d.isCompleted}
                     onDelete={onDelete}
                     editable={editable}
+                    editData={editData}
+                    setEditData={setEditData}
+                    createdOn={d.createdOn}
+                    completedBefore={d.completedBefore}
                   ></Data>
                 );
               }
             })}
-            {/* {data.map((d) => (
-                
-              <Data
-                key={d.id}
-                id={d.id}
-                text={d.text.toUpperCase()}
-                onDelete={onDelete}
-                editable={editable}
-              ></Data>
-            ))} */}
           </ol>
         </div>
       </div>
